@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} !
+  div Folders:
+  ul
+    each val in dirs
+      a(href=val.url) #{val.text}
+      div
+  div Files:
+  ul
+    each val in files
+      li #{val.text}
